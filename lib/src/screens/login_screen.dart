@@ -9,7 +9,6 @@ class LoginScreen extends StatefulWidget {
 class _LoginScreenState extends State<LoginScreen> {
   final email = TextEditingController();
   final password = TextEditingController();
-
   bool obscured = true;
 
   @override
@@ -17,6 +16,18 @@ class _LoginScreenState extends State<LoginScreen> {
     email.dispose();
     password.dispose();
     super.dispose();
+  }
+
+  void _submit() {
+    if (email.text.isEmpty || password.text.isEmpty) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        const SnackBar(content: Text('Email dan password wajib diisi')),
+      );
+      return;
+    }
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(content: Text('Login sebagai ${email.text} (dummy)')),
+    );
   }
 
   @override
@@ -51,7 +62,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed: () => setState(() => obscured = !obscured),
                 ),
               ),
+              onSubmitted: (_) => _submit(),
             ),
+            const SizedBox(height: 20),
+            FilledButton(onPressed: _submit, child: const Text('Login')),
           ],
         ),
       ),
