@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'routes.dart';
 import 'widgets/nim_footer.dart';
+import 'strings.dart';
 
 class UtsApp extends StatelessWidget {
   const UtsApp({super.key});
-  static const nim = '1123150039';
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: S.appTitle,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         useMaterial3: true,
@@ -19,7 +20,12 @@ class UtsApp extends StatelessWidget {
       builder: (context, child) => Stack(
         children: [
           if (child != null) child,
-          const Positioned(left: 8, right: 8, bottom: 6, child: NimFooter(nim: nim)),
+          const Positioned(
+            left: 8,
+            right: 8,
+            bottom: 6,
+            child: NimFooter(nim: S.nim),
+          ),
         ],
       ),
     );

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../routes.dart';
+import '../strings.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -28,9 +29,13 @@ class _SplashScreenState extends State<SplashScreen> {
           children: [
             Icon(Icons.flutter_dash, size: 96, color: cs.onPrimaryContainer),
             const SizedBox(height: 12),
-            Text('KB1179 UTS',
+            Text(
+              S.appTitle,
               style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                color: cs.onPrimaryContainer, fontWeight: FontWeight.w700)),
+                    color: cs.onPrimaryContainer,
+                    fontWeight: FontWeight.w700,
+                  ),
+            ),
           ],
         ),
       ),
