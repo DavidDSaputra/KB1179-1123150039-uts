@@ -26,10 +26,8 @@ class _LoginScreenState extends State<LoginScreen> {
       );
       return;
     }
-
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(content: Text('Login berhasil untuk ${email.text} (dummy)')),
-    );
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text('Login sebagai ${email.text} (dummy)')));
   }
 
   @override
@@ -45,47 +43,48 @@ class _LoginScreenState extends State<LoginScreen> {
             padding: const EdgeInsets.only(bottom: 6),
             child: Text(
               'NIM: ${S.nim}',
-              style: t.textTheme.labelSmall?.copyWith(
-                color: t.colorScheme.outline,
-              ),
+              style: t.textTheme.labelSmall?.copyWith(color: t.colorScheme.outline),
             ),
           ),
         ),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20),
-        child: ListView(
-          children: [
-            Text(S.welcome, style: t.textTheme.headlineSmall),
-            const SizedBox(height: 16),
-            TextField(
-              controller: email,
-              keyboardType: TextInputType.emailAddress,
-              textInputAction: TextInputAction.next,
-              decoration: const InputDecoration(
-                labelText: S.emailLabel,
-                prefixIcon: Icon(Icons.email_outlined),
-              ),
-            ),
-            const SizedBox(height: 12),
-            TextField(
-              controller: password,
-              obscureText: obscured,
-              decoration: InputDecoration(
-                labelText: S.passwordLabel,
-                prefixIcon: const Icon(Icons.lock_outline),
-                suffixIcon: IconButton(
-                  icon: Icon(obscured ? Icons.visibility : Icons.visibility_off),
-                  onPressed: () => setState(() => obscured = !obscured),
+      body: Center(
+        child: ConstrainedBox(
+          constraints: const BoxConstraints(maxWidth: 480),
+          child: Padding(
+            padding: const EdgeInsets.all(20),
+            child: ListView(
+              children: [
+                Text(S.welcome, style: t.textTheme.headlineSmall),
+                const SizedBox(height: 16),
+                TextField(
+                  controller: email,
+                  keyboardType: TextInputType.emailAddress,
+                  textInputAction: TextInputAction.next,
+                  decoration: const InputDecoration(
+                    labelText: S.emailLabel,
+                    prefixIcon: Icon(Icons.email_outlined),
+                  ),
                 ),
-              ),
+                const SizedBox(height: 12),
+                TextField(
+                  controller: password,
+                  obscureText: obscured,
+                  decoration: InputDecoration(
+                    labelText: S.passwordLabel,
+                    prefixIcon: const Icon(Icons.lock_outline),
+                    suffixIcon: IconButton(
+                      icon: Icon(obscured ? Icons.visibility : Icons.visibility_off),
+                      onPressed: () => setState(() => obscured = !obscured),
+                    ),
+                  ),
+                  onSubmitted: (_) => _submit(),
+                ),
+                const SizedBox(height: 20),
+                FilledButton(onPressed: _submit, child: const Text(S.loginButton)),
+              ],
             ),
-            const SizedBox(height: 20),
-            FilledButton(
-              onPressed: _submit,
-              child: const Text(S.loginButton),
-            ),
-          ],
+          ),
         ),
       ),
     );

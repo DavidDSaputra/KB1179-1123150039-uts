@@ -21,9 +21,7 @@ class UtsApp extends StatelessWidget {
         children: [
           if (child != null) child,
           const Positioned(
-            left: 8,
-            right: 8,
-            bottom: 6,
+            left: 8, right: 8, bottom: 6,
             child: NimFooter(nim: S.nim),
           ),
         ],

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'src/app.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp(const UtsApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
       ),
-      home: const Scaffold(body: Center(child: Text('Init'))),
     );
   }
 }

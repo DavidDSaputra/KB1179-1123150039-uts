@@ -1,14 +1,12 @@
 class S {
-  // Identitas
   static const name = 'David Saputra';
-  static const nim = '1123150039';
+  static const nim  = '1123150039';
 
-  // Judul & label umum
-  static const appTitle = 'KB1179 UTS';
-  static const loginTitle = 'Login';
-  static const welcome = 'Welcome back 👋';
-  static const emailLabel = 'Email';
+  static const appTitle    = 'KB1179 UTS';
+  static const loginTitle  = 'Login';
+  static const welcome     = 'Welcome back 👋';
+  static const emailLabel  = 'Email';
   static const passwordLabel = 'Password';
   static const loginButton = 'Login';
-  static const emptyError = 'Email dan password wajib diisi';
+  static const emptyError  = 'Email dan password wajib diisi';
 }
