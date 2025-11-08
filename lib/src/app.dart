@@ -15,7 +15,7 @@ class UtsApp extends StatelessWidget {
         useMaterial3: true,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
       ),
-      initialRoute: Routes.splash,
+      initialRoute: Routes.splash1,
       routes: Routes.map,
       builder: (context, child) => Stack(
         children: [
