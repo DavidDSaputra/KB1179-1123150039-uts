@@ -14,12 +14,12 @@
 ---
 
 ## 🎨 Deskripsi
-Proyek **UTS Pemrograman Mobile KB1179** ini merupakan aplikasi Flutter sederhana yang menampilkan:
+**UTS Pemrograman Mobile KB1179** aplikasi Flutter sederhana yang menampilkan:
 
 - 🌈 **Material 3 Theme** dengan seed color `Colors.red`
-- 🚀 **Splash Screen geser (3 halaman)** menggunakan `PageView`
-- 🔐 **Halaman Login** dengan validasi & SnackBar
-- 🧾 **Footer NIM global** untuk verifikasi penguji
+- 🚀 **Splash Screen geser (3 halaman)**
+- 🔐 **Halaman Login** dengan validasi
+- 🧾 **Footer NIM global** 
 
 ---
 
@@ -30,7 +30,7 @@ Proyek **UTS Pemrograman Mobile KB1179** ini merupakan aplikasi Flutter sederhan
 
 <p align="center">
   <img src="screenshots/show (1).gif" width="260" alt="App demo animation"><br>
-  <em>Swipe kanan-kiri buat pindah antar splash 👆</em>
+  <em>Swipe kanan-kiri buat pindah antar splash</em>
 </p>
 
 ## 🛠️ Cara Menjalankan
