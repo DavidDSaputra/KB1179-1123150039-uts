@@ -1,6 +1,6 @@
 <!-- Banner animasi -->
 <p align="center">
-  <img src="uma-musume-kitasan-black.gif" width="100%" alt="Material 3 Red">
+  <img src="screenshots/uma-musume-kitasan-black.gif" width="100%" alt="Material 3 Red">
 </p>
 
 <h1 align="center"> KB1179 UTS - Flutter Mobile Programming</h1>
