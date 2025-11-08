@@ -1,6 +1,6 @@
 <!-- Banner animasi -->
 <p align="center">
-  <img src="https://i.imgur.com/pFkQf2P.gif" width="100%" alt="Material 3 Red">
+  <img src="uma-musume-kitasan-black.gif" width="100%" alt="Material 3 Red">
 </p>
 
 <h1 align="center"> KB1179 UTS - Flutter Mobile Programming</h1>
@@ -30,7 +30,7 @@ Proyek **UTS Pemrograman Mobile KB1179** ini merupakan aplikasi Flutter sederhan
 | <img src="screenshots/splash1.png" width="200"/> | <img src="screenshots/splash2.png" width="200"/> | <img src="screenshots/splash3.png" width="200"/> | <img src="screenshots/login.png" width="200"/> |
 
 <p align="center">
-  <img src="screenshots/app.gif" width="260" alt="App demo animation"><br>
+  <img src="screenshots/show (1).gif" width="260" alt="App demo animation"><br>
   <em>Swipe kanan-kiri buat pindah antar splash 👆</em>
 </p>
 
